@@ -141,4 +141,95 @@
   color: #ffffff;
 }
 
+/* ===== RESPONSIVE COMPONENT STYLES ===== */
 
+/* Tablets and small laptops (768px and below) */
+@media (max-width: 768px) {
+  .game {
+    flex-direction: column;
+    gap: 25px;
+    padding: 30px;
+    margin: 20px;
+  }
+
+  .game-title {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .game-info {
+    min-width: 100%;
+    text-align: center;
+  }
+
+  .game-info ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding-left: 0;
+  }
+
+  .game-info li {
+    margin: 5px;
+  }
+
+  .game-info button {
+    min-width: 120px;
+    text-align: center;
+    padding: 8px 12px;
+  }
+}
+
+/* Large phones (480px and below) */
+@media (max-width: 480px) {
+  .game {
+    padding: 20px 15px;
+    margin: 15px;
+    gap: 20px;
+  }
+
+  .game-title {
+    font-size: 1.8rem;
+  }
+
+  /* Adjust board size */
+  .square {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  .status {
+    font-size: 1.1rem;
+    padding: 10px 15px;
+  }
+}
+
+/* Very small phones (360px and below) */
+@media (max-width: 360px) {
+  .square {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+
+  .game-title {
+    font-size: 1.6rem;
+  }
+}
+
+/* Landscape orientation for mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .game {
+    flex-direction: row;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .square {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+}
