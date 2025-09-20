@@ -6,7 +6,7 @@ interface SquareProps {
 function Square({ value, onSquareClick }: SquareProps) {
   return (
     <button
-      className= "square"
+      className={`square ${value ? value.toLowerCase() : ''}`}
       onClick={onSquareClick}
     >
       {value}
