@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Board from './Components/Board';
 import './App.css';
 import Game from './Components/Game';
 
@@ -15,9 +14,6 @@ function App() {
   return (
     <div className="app">
       <Game />
-      <div className="game-board">
-        <Board squares={squares} onPlay={handlePlay} xIsNext={xIsNext} />
-      </div>
     </div>
   );
 }
