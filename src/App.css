@@ -91,10 +91,12 @@
   padding: 15px;
   backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  gap: 2px;
 }
 
 .board-row {
   display: flex;
+  gap: 2px;
 }
 
 .square {
@@ -102,7 +104,7 @@
   height: 70px;
   font-size: 28px;
   font-weight: bold;
-  margin: 2px;
+  
   background: rgba(255, 255, 255, 0.486);
   border: 1px solid rgba(255, 255, 255, 0.3);
   cursor: pointer;
@@ -144,6 +146,7 @@
 /* ===== RESPONSIVE COMPONENT STYLES ===== */
 
 /* Tablets and small laptops (768px and below) */
+/* Tablets and small laptops (768px and below) */
 @media (max-width: 768px) {
   .game {
     flex-direction: column;
@@ -165,53 +168,67 @@
   .game-info ol {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 8px; /* Reduced from 10px */
     justify-content: center;
     padding-left: 0;
   }
 
   .game-info li {
-    margin: 5px;
+    margin: 0; /* Changed from 5px - remove vertical margin */
   }
 
   .game-info button {
     min-width: 120px;
     text-align: center;
     padding: 8px 12px;
+    margin: 2px 0; /* Add minimal vertical margin to buttons instead */
   }
 }
 
 /* Large phones (480px and below) */
 @media (max-width: 480px) {
-  .game {
-    padding: 20px 15px;
-    margin: 15px;
-    gap: 20px;
+  .game-info ol {
+    gap: 6px; /* Even smaller gap on phones */
   }
-
-  .game-title {
-    font-size: 1.8rem;
-  }
-
-  /* Adjust board size */
-  .square {
-    width: 50px;
-    height: 50px;
-    font-size: 20px;
-  }
-
-  .status {
-    font-size: 1.1rem;
-    padding: 10px 15px;
+  
+  .game-info button {
+    min-width: 100px;
+    padding: 6px 10px;
+    font-size: 0.9rem;
   }
 }
 
 /* Very small phones (360px and below) */
 @media (max-width: 360px) {
+  .game {
+    padding: 12px 8px; /* Reduce padding further */
+    margin: 8px;
+    gap: 15px;
+  }
+
+  .board {
+    width: 100%; /* Make board full width */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the rows */
+  }
+
+  .board-row {
+    justify-content: center; /* Center squares in row */
+    width: 100%;
+  }
+
   .square {
-    width: 45px;
+    width: 40px; /* Slightly smaller squares */
+    height: 40px;
+    font-size: 16px;
+    margin: 1px;
+  }
+  .square {
+    width: 40px;
     height: 45px;
     font-size: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
   }
 
   .game-title {
