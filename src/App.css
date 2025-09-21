@@ -19,23 +19,22 @@
     inset 0 1px 1px rgba(255, 255, 255, 0.1),
     inset 0 -1px 1px rgba(0, 0, 0, 0.05);
   
-  /* Text contrast */
   color: #ffffff;
 }
 
-/* Add to App.css for subtle enhancements */
+
 .game-title {
   font-size: 2.5rem;
   font-weight: 700;
   margin: 0 0 20px 0;
   text-align: left;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle depth */
-  letter-spacing: -0.5px; /* Slightly tighter spacing */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  letter-spacing: -0.5px; 
 }
 
 .game-subtitle {
   font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+  color: rgba(255, 255, 255, 0.8); 
   margin: 0 0 30px 0;
   text-align: center;
   font-weight: 400;
@@ -145,7 +144,6 @@
 
 /* ===== RESPONSIVE COMPONENT STYLES ===== */
 
-/* Tablets and small laptops (768px and below) */
 /* Tablets and small laptops (768px and below) */
 @media (max-width: 768px) {
   .game {
