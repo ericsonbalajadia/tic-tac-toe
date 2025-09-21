@@ -35,11 +35,13 @@ export default function Game() {
 
   return (
     <div className="game">
+      <h1 className='game-title'>Tic Tac Toe</h1>
       <div className="game-board">
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
       </div>
-        <div className="game-info"></div>
+      <div className="game-info">
         <ol>{moves}</ol>
       </div>
+    </div>
   );
 }
